@@ -154,7 +154,6 @@ Please use the above information and follow the guidelines below to answer the u
 
 ## Output Requirements:
 Please respond in the following JSON format, ensuring the returned JSON can be parsed by Python's json.loads method:
-```
 {
   "asking_object_metrics": "string", // The theme and metrics the user is asking about
   "thoughts": "string", // Compare if the chart information's theme and metrics match
@@ -162,12 +161,12 @@ Please respond in the following JSON format, ensuring the returned JSON can be p
   "chart_names": "list", // Names of the matching charts, up to two or empty
   "chart_ids": "list" // IDs of the matching charts, up to two or empty
 }
-```
 
 ## Input:
 Human: New Devices Added on the Korean Server in the Past Year
 
 ```
+
 - JSON 解析准确率：输出中间结果的 JSON 解析率为 100%，而不输出中间结果的解析率为 84.5%。
 - 结果准确性：相比仅输出最终结果，输出中间解析结果的正确率提升了 15.68%。
 - 耗时增加：然而，输出中间解析结果会增加耗时。在 150 条测试数据中，由于输出中间结果的 token 数量约为不输出中间结果的 4 倍，导致 LLM 的处理时间显著延长，每条数据的处理时间平均增加了 80%（由1.52s增加至2.82s）
